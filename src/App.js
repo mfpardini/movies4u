@@ -2,18 +2,22 @@ import './App.css';
 
 import React, { Component } from 'react';
 import NavigationBar from './components/NavigationBar';
+import Routes from './routes';
+
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <Routes />
+      /*{ <div className="App">
         <NavigationBar />
-      <header className="App-header">
-        <p>
-          testing app
+        <header className="App-header">
+          <p>
+            testing app
         </p>
-      </header>
-    </div>
+        </header>
+      </div> }*/
     );
   }
 }

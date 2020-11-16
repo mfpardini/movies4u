@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class NavigationBar extends Component {
     render() {
         return (
             <nav className="navbar navbar-expand-lg navbar-light bg-light" >
-                <a className="navbar-brand" href="#" > Navbar </a>
+                <Link className="navbar-brand" to="/" > Home </Link>
                 <button className="navbar-toggler"
                     type="button"
                     data-toggle="collapse"
@@ -19,12 +20,10 @@ class NavigationBar extends Component {
                     id="navbarSupportedContent" >
                     <ul className="navbar-nav mr-auto" >
                         <li className="nav-item active" >
-                            <a className="nav-link"
-                                href="#" > Home <span className="sr-only" > (current) </span></a>
+                            <Link className="navbar-link" to="/" > Home <span className="sr-only" > (current) </span></Link>
                         </li>
                         <li className="nav-item" >
-                            <a className="nav-link"
-                                href="#" > Link </a>
+                            <Link className="navbar-link" to="/test" > Test </Link>
                         </li>
                         <li className="nav-item dropdown" >
                             <a className="nav-link dropdown-toggle"
