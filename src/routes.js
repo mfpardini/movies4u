@@ -1,20 +1,18 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NavigationBar from './components/NavigationBar';
-import Browser from './pages/Browser';
-import Test from './pages/test';
+import MovieDetail from './pages/MovieDetail';
+import Movies from './pages/Movies';
+
+export const moviesClassificationRoutes = ["/popular", "/top_rated", "/upcoming", "/now_playing",];
 
 export default function Routes() {
     return (
         <Router>
-            <NavigationBar />
+            <Route component={NavigationBar} />
             <Switch>
-                <Route path='/' exact>
-                    <Browser />
-                </Route>
-                <Route path='/test' exact>
-                    <Test />
-                </Route>
+                <Route path={moviesClassificationRoutes.concat('/')} exact component={Movies} />
+                <Route path="/movie/detail/:id" exact component={MovieDetail} />
             </Switch>
         </Router>
     );

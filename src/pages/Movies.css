@@ -1,0 +1,47 @@
+.movie-main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: auto 100px;
+    background-image: url('../assets/bg-movies.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.full-bg {
+    min-width: 90vw;
+}
+
+.button-group {
+    display: none;
+    margin-top: 10px;
+}
+
+@media (min-width: 1200px) {
+    .col-xl-2 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+
+@media (min-width: 768px) {
+    .row {
+        max-width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .button-group {
+        display: inline-block;
+    }
+    .button-list {
+        display: none;
+    }
+}
+
+.button {
+    width: 150px;
+}

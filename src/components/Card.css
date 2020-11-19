@@ -1,0 +1,32 @@
+.card {
+    width: 100%;
+    margin-top: 5%;
+    height: 95%;
+}
+
+.card-text {
+    font-size: 0.8rem;
+}
+
+.card-title {
+    font-size: 1rem;
+}
+
+a,
+a:hover {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.slide-top:hover {
+    animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-top {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
